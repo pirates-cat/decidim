@@ -2,10 +2,10 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "My Application Name"
+  config.application_name = "decidim.pirates.cat"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = "change-me@domain.org"
+  config.mailer_sender = "decidim@pirates.cat"
 
   # Sets the list of available locales for the whole application.
   #
@@ -22,7 +22,7 @@ Decidim.configure do |config|
   # Sets the default locale for new organizations. When creating a new
   # organization from the System area, system admins will be able to overwrite
   # this value for that specific organization.
-  config.default_locale = :en
+  config.default_locale = :ca
 
   # Defines a list of custom content processors. They are used to parse and
   # render specific tags inside some user-provided content. Check the docs for
@@ -30,7 +30,7 @@ Decidim.configure do |config|
   # config.content_processors = []
 
   # Whether SSL should be enabled or not.
-  # config.force_ssl = true
+  config.force_ssl = false
 
   # Geocoder configuration
   # config.geocoder = {
@@ -45,7 +45,7 @@ Decidim.configure do |config|
   # end
 
   # Currency unit
-  # config.currency_unit = "€"
+  config.currency_unit = "€"
 
   # Defines the quality of image uploads after processing. Image uploads are
   # processed by Decidim, this value helps reduce the size of the files.
@@ -82,7 +82,7 @@ Decidim.configure do |config|
   # config.data_portability_expiry_time = 7.days
 
   # Max requests in a time period to prevent DoS attacks. Only applied on production.
-  # config.throttling_max_requests = 100
+  config.throttling_max_requests = 100
 
   # Time window in which the throttling is applied.
   # config.throttling_period = 1.minute
@@ -180,14 +180,14 @@ Decidim.configure do |config|
   # Only needed if you want to have Etherpad integration with Decidim. See
   # Decidim docs at docs/services/etherpad.md in order to set it up.
   #
-  # config.etherpad = {
-  #   server: Rails.application.secrets.etherpad[:server],
-  #   api_key: Rails.application.secrets.etherpad[:api_key],
-  #   api_version: Rails.application.secrets.etherpad[:api_version]
-  # }
+  config.etherpad = {
+    server: Rails.application.secrets.etherpad[:server],
+    api_key: Rails.application.secrets.etherpad[:api_key],
+    api_version: Rails.application.secrets.etherpad[:api_version]
+  }
 
   # Sets Decidim::Exporters::CSV's default column separator
-  # config.default_csv_col_sep = ";"
+  config.default_csv_col_sep = ";"
 
   # The list of roles a user can have, not considering the space-specific roles.
   # config.user_roles = %w(admin user_manager)
