@@ -1,6 +1,6 @@
 GIT
-  remote: https://github.com/diputacioBCN/decidim-diba.git
-  revision: 914f47e4ae89a7adae605988bb6a7a04121ee7a4
+  remote: https://github.com/pirates-cat/decidim-diba.git
+  revision: 23928f44fea45792a6c992dd5a0360d331c32ebe
   specs:
     decidim-ldap (0.18.0)
       decidim-core (>= 0.18.0)

@@ -16,7 +16,7 @@ gem "wkhtmltopdf-binary"
 # LDAP support not released individually, only as a package of diputacioBCN
 # Stay tuned to: https://github.com/diputacioBCN/decidim-diba/issues/40
 # gem 'decidim-ldap'
-git 'https://github.com/diputacioBCN/decidim-diba.git' do
+git 'https://github.com/pirates-cat/decidim-diba.git' do
   gem 'decidim-ldap'
 end
 
